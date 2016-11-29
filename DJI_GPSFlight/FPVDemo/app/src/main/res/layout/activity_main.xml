@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dji.FPVDemo.MainActivity">
+
+    <Button
+        android:text="Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endCoordEntry"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addCoord"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addCoord"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/endCoordEntry"
+        app:layout_constraintRight_toLeftOf="@+id/clearCoords"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:text="Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearCoords"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addCoord"
+        android:layout_marginEnd="112dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:text="PrepStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prepare_start"
+        app:layout_constraintBaseline_toBaselineOf="@+id/clearCoords"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp" />
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/scrollView2"
+        android:layout_height="400dp">
+
+        <TextView
+            android:text="Coordinates:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/CoordView" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
